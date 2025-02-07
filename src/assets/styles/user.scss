@@ -1,0 +1,117 @@
+.user {
+  min-height: 80vh;
+  background-color: #616161;
+  margin: auto;
+
+  div {
+    padding-top: 0.5em;
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2rem; /* Ajustement de taille pour les écrans plus petits */
+  }
+
+  button {
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #008e5b;
+    }
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    div {
+      padding-top: 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    div {
+      padding-top: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    button {
+      font-size: 0.8rem;
+      padding: 6px;
+    }
+  }
+}
+
+.form {
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet aux éléments de s'empiler sur les petits écrans */
+  }
+
+  input {
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.2rem;
+    width: 100%; /* S'adapte à la largeur disponible sur mobile */
+    max-width: 300px; /* Limite la largeur maximale */
+  }
+
+  label {
+    font-weight: bold;
+    margin-left: 0.25rem;
+    font-size: 1rem; /* Taille réduite pour les petits écrans */
+  }
+
+  &__button-zone {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+
+    /* Ajustement responsive */
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap; /* Empile les boutons sur les petits écrans */
+      gap: 5px;
+    }
+  }
+
+  .form__button {
+    width: 100px;
+    padding: 8px;
+    font-size: 1rem;
+
+    @media screen and (max-width: 768px) {
+      width: 90px;
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 80px;
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+  }
+}

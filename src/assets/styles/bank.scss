@@ -1,0 +1,99 @@
+.bank {
+  padding: 2em 0;
+
+  article {
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 2em;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Pour permettre l'empilement sur les petits écrans */
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column; /* Empile les éléments */
+      width: 90%; /* Réduit la largeur */
+      padding: 1.5rem;
+    }
+  }
+
+  .div {
+    text-align: left;
+    margin-bottom: auto;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 1rem; /* Ajoute de l'espacement entre les sections */
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: normal;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.95rem; /* Réduit légèrement la taille du texte */
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem; /* Réduit la taille de la police pour les petits écrans */
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: lighter;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 0.85rem;
+    }
+  }
+
+  button {
+    display: block;
+    width: 15%;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #008e5b;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 30%; /* Agrandit le bouton sur tablette pour plus de clarté */
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 50%; /* Bouton plus grand sur mobile */
+      font-size: 0.9rem;
+      padding: 6px;
+    }
+  }
+}

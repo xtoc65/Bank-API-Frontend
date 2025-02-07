@@ -1,0 +1,51 @@
+.error {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%; /* Pour éviter que l'image dépasse la largeur de l'écran */
+      height: auto; /* Maintien des proportions */
+    }
+  
+    p {
+      color: #ff6060;
+      width: 100%;
+      font-weight: 500;
+      font-size: 36px;
+      text-align: center;
+      margin: 1rem 0;
+  
+      @media screen and (max-width: 768px) {
+        font-size: 30px; /* Réduction de la taille du texte pour tablette */
+      }
+  
+      @media screen and (max-width: 480px) {
+        font-size: 24px; /* Réduction supplémentaire pour mobile */
+      }
+    }
+  
+    .link {
+      color: black;
+      margin: 3.95em 0;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      text-decoration: none; /* Ajout pour éviter le soulignement des liens */
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #ff6060; /* Changement de couleur au survol */
+      }
+  
+      @media screen and (max-width: 768px) {
+        font-size: 16px; /* Taille légèrement réduite pour tablette */
+        margin: 2em 0;
+      }
+  
+      @media screen and (max-width: 480px) {
+        font-size: 14px; /* Réduction supplémentaire pour mobile */
+        margin: 1.5em 0;
+      }
+    }
+  }
+  

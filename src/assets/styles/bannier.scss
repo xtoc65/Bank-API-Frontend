@@ -1,0 +1,81 @@
+@mixin text-style($weight, $size, $margin-bottom: 0) {
+  font-weight: $weight;
+  font-size: $size;
+  margin-bottom: $margin-bottom;
+}
+
+.hero {
+  position: relative;
+  margin: 0 0 -10em 0;
+  @media screen and (max-width: 768px) {
+    margin: auto;
+  }
+
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+      height: 200px;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 150px;
+    }
+  }
+}
+
+.hero-content {
+  position: relative;
+  top: -15rem;
+  left: 75%;
+  width: 200px;
+  background: white;
+  padding: 2rem;
+  text-align: left;
+
+  .subtitle {
+    @include text-style(bold, 1rem);
+    margin: 0;
+  }
+
+  .text {
+    @include text-style(normal, 0.9rem, 0);
+  }
+
+  // Responsive adjustments
+  @media screen and (max-width: 1024px) {
+    left: 60%;
+    width: 180px;
+  }
+
+  @media screen and (max-width: 768px) {
+    position: initial;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .text {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    top: -8rem;
+    padding: 1rem;
+    text-align: center;
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .text {
+      font-size: 0.9rem;
+    }
+  }
+}
