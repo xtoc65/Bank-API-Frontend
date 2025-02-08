@@ -1,7 +1,7 @@
 function ErrorMessage() {
     return(
         <h1>
-            ERREURRRRRRRRRRRR
+            Erreur veillez réessayer plus tard
         </h1>
     )
 }
